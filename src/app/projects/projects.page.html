@@ -1,13 +1,16 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title slot="start" class="ion-padding-start">
-      <span class="gradient-text" style="font-size: 1.8rem; letter-spacing: 4px;">GAURAV</span>
+      <span class="gradient-text logo-title">GAURAV</span>
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button routerLink="/home" routerLinkActive="active-tab" class="neon-btn">Home</ion-button>
-      <ion-button routerLink="/dashboard" routerLinkActive="active-tab" class="neon-btn">Skills</ion-button>
-      <ion-button routerLink="/projects" routerLinkActive="active-tab" class="neon-btn">Projects</ion-button>
-      <ion-button routerLink="/about" routerLinkActive="active-tab" class="neon-btn">About</ion-button>
+      <div class="desktop-only">
+        <ion-button routerLink="/home" routerLinkActive="active-tab" class="neon-btn">Home</ion-button>
+        <ion-button routerLink="/dashboard" routerLinkActive="active-tab" class="neon-btn">Skills</ion-button>
+        <ion-button routerLink="/projects" routerLinkActive="active-tab" class="neon-btn">Projects</ion-button>
+        <ion-button routerLink="/about" routerLinkActive="active-tab" class="neon-btn">About</ion-button>
+      </div>
+      <ion-menu-button class="mobile-only" color="primary"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +19,7 @@
   <section class="ion-padding">
     <div class="page-header ion-text-center ion-margin-bottom animate-in">
       <h4 style="color: var(--ion-color-secondary); letter-spacing: 5px;">EXECUTED_LOGS</h4>
-      <h1 class="gradient-text" style="font-size: 3.5rem;">PROJECT ARCHIVE</h1>
+      <h1 class="gradient-text">PROJECT ARCHIVE</h1>
     </div>
 
     <ion-grid>
@@ -30,8 +33,7 @@
             <div class="ion-padding">
               <h4 style="color: var(--ion-color-primary); letter-spacing: 5px; font-weight: 800; margin-bottom: 5px;">{{
                 project.category | uppercase }}</h4>
-              <h2 style="font-weight: 900; font-size: 2.2rem; margin-top: 0; margin-bottom: 15px;">{{ project.title }}
-              </h2>
+              <h2 class="project-title">{{ project.title }}</h2>
               <p style="margin-bottom: 20px;">{{ project.description }}</p>
               <div class="tags">
                 <span *ngFor="let tag of project.tags"

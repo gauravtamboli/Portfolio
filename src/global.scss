@@ -92,6 +92,12 @@ body {
     }
 }
 
+.logo-title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+    letter-spacing: clamp(2px, 2vw, 4px) !important;
+    font-weight: 800;
+}
+
 ion-header {
     background: #000;
 }
@@ -159,7 +165,7 @@ ion-toolbar {
 }
 
 section {
-    padding: 80px 20px;
+    padding: clamp(40px, 10vw, 80px) 20px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -201,8 +207,22 @@ section {
 }
 
 @media (max-width: 768px) {
-    ion-buttons {
-        display: none;
-        /* Hide head tabs on mobile for space */
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none !important;
+    }
+
+    .desktop-only {
+        display: flex !important;
+        align-items: center;
     }
 }

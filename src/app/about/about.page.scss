@@ -27,13 +27,13 @@
 
         .category-label {
             color: var(--ion-color-secondary);
-            letter-spacing: 8px;
+            letter-spacing: clamp(4px, 2vw, 8px);
             font-weight: 300;
             margin-bottom: 10px;
         }
 
         .main-name {
-            font-size: 5rem;
+            font-size: clamp(2.5rem, 10vw, 5rem);
             font-weight: 900;
             margin: 0;
             letter-spacing: -2px;
@@ -42,11 +42,10 @@
         }
 
         .tagline {
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 4vw, 1.2rem);
             color: var(--ion-color-primary);
-            letter-spacing: 3px;
+            letter-spacing: clamp(1px, 1vw, 3px);
             opacity: 1;
-            /* Improved visibility */
         }
     }
 }
@@ -100,7 +99,7 @@
 
 .identity-text {
     h2 {
-        font-size: 3rem;
+        font-size: clamp(2rem, 8vw, 3rem);
         margin-bottom: 25px;
     }
 
