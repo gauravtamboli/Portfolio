@@ -1,0 +1,24 @@
+.menu-item {
+    --background: transparent;
+    --background-hover: rgba(var(--ion-color-primary-rgb), 0.1);
+    --color: #fff;
+    --border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    transition: all 0.3s;
+
+    ion-icon {
+        color: var(--ion-color-secondary);
+        font-size: 1.4rem;
+    }
+
+    &.active-tab {
+        --background: rgba(var(--ion-color-primary-rgb), 0.15);
+        --color: var(--ion-color-primary);
+        font-weight: 800;
+
+        ion-icon {
+            color: var(--ion-color-primary);
+        }
+    }
+}

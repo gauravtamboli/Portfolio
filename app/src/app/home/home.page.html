@@ -1,13 +1,16 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title slot="start" class="ion-padding-start">
-      <span class="gradient-text" style="font-size: 1.8rem; letter-spacing: 4px;">GAURAV</span>
+      <span class="gradient-text logo-title">GAURAV</span>
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button routerLink="/home" routerLinkActive="active-tab" class="neon-btn">Home</ion-button>
-      <ion-button routerLink="/dashboard" routerLinkActive="active-tab" class="neon-btn">Skills</ion-button>
-      <ion-button routerLink="/projects" routerLinkActive="active-tab" class="neon-btn">Projects</ion-button>
-      <ion-button routerLink="/about" routerLinkActive="active-tab" class="neon-btn">About</ion-button>
+      <div class="desktop-only">
+        <ion-button routerLink="/home" routerLinkActive="active-tab" class="neon-btn">Home</ion-button>
+        <ion-button routerLink="/dashboard" routerLinkActive="active-tab" class="neon-btn">Skills</ion-button>
+        <ion-button routerLink="/projects" routerLinkActive="active-tab" class="neon-btn">Projects</ion-button>
+        <ion-button routerLink="/about" routerLinkActive="active-tab" class="neon-btn">About</ion-button>
+      </div>
+      <ion-menu-button class="mobile-only" color="primary"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>

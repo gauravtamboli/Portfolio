@@ -8,7 +8,7 @@
 
     h3 {
         color: #ffffff !important;
-        font-size: 1.6rem !important;
+        font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
         font-weight: 900 !important;
         margin: 15px 0 10px 0 !important;
         text-shadow: none !important;
@@ -43,4 +43,13 @@
         background: linear-gradient(90deg, var(--ion-color-primary), var(--ion-color-secondary)) !important;
         box-shadow: 0 0 15px var(--ion-color-primary) !important;
     }
+}
+
+.knowledge-label {
+    color: var(--ion-color-secondary) !important;
+    letter-spacing: clamp(2px, 2vw, 5px) !important;
+}
+
+.dashboard-title {
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
 }
