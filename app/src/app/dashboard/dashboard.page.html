@@ -26,14 +26,16 @@
       <ion-row>
         <ion-col size="12" size-sm="6" size-lg="3" *ngFor="let skill of skills" class="animate-in">
           <div class="cyber-card">
-            <div class="skill-icon-wrap">
-              <ion-icon [name]="skill.icon" color="primary"></ion-icon>
+            <div class="cyber-card-inner">
+              <div class="skill-icon-wrap">
+                <ion-icon [name]="skill.icon" color="primary"></ion-icon>
+              </div>
+              <h3>{{ skill.name }}</h3>
+              <div class="skill-bar">
+                <div class="skill-progress" [style.width]="skill.level === 'Expert' ? '95%' : '80%'"></div>
+              </div>
+              <p>LEVEL: {{ skill.level | uppercase }}</p>
             </div>
-            <h3>{{ skill.name }}</h3>
-            <div class="skill-bar">
-              <div class="skill-progress" [style.width]="skill.level === 'Expert' ? '95%' : '80%'"></div>
-            </div>
-            <p>LEVEL: {{ skill.level | uppercase }}</p>
           </div>
         </ion-col>
       </ion-row>
