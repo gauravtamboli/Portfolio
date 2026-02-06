@@ -1,0 +1,33 @@
+/** Nebula Cyberpunk Theme **/
+:root {
+  --ion-color-primary: #00fff2;
+  /* Neon Cyan */
+  --ion-color-primary-rgb: 0, 255, 242;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-shade: #00e0d5;
+  --ion-color-primary-tint: #1afff4;
+
+  --ion-color-secondary: #ff00ff;
+  /* Magenta */
+  --ion-color-secondary-rgb: 255, 0, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #e000e0;
+  --ion-color-secondary-tint: #ff1aff;
+
+  --ion-color-tertiary: #7000ff;
+  /* Deep Purple */
+  --ion-color-tertiary-rgb: 112, 0, 255;
+
+  --app-bg-deep: #050510;
+  --app-card-bg: rgba(255, 255, 255, 0.03);
+  --app-glow: 0 0 20px rgba(0, 255, 242, 0.5);
+  --app-gradient: linear-gradient(135deg, #050510 0%, #100b25 50%, #050510 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ion-background-color: var(--app-bg-deep);
+    --ion-text-color: #ffffff;
+    --ion-toolbar-background: transparent;
+  }
+}

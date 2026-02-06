@@ -1,0 +1,99 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title slot="start" class="ion-padding-start">
+      <span class="gradient-text" style="font-size: 1.8rem; letter-spacing: 4px;">GAURAV</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home" routerLinkActive="active-tab" class="neon-btn">Home</ion-button>
+      <ion-button routerLink="/dashboard" routerLinkActive="active-tab" class="neon-btn">Skills</ion-button>
+      <ion-button routerLink="/projects" routerLinkActive="active-tab" class="neon-btn">Projects</ion-button>
+      <ion-button routerLink="/about" routerLinkActive="active-tab" class="neon-btn">About</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="about-container">
+    <!-- Immersive Hero Section -->
+    <div class="about-hero animate-in">
+      <div class="hero-bg-accent"></div>
+      <div class="hero-content">
+        <h4 class="category-label">IDENTITY.TRANSCRIPT</h4>
+        <h1 class="main-name">{{ name }}</h1>
+        <p class="tagline">Full Stack Architect | UI/UX Visionary | System Engineer</p>
+      </div>
+    </div>
+
+    <!-- Core Identity Section -->
+    <section class="identity-section">
+      <div class="section-grid">
+        <div class="identity-visual animate-in">
+          <div class="visual-card cyber-card floating">
+            <div class="inner-visual">
+              <ion-icon name="finger-print-outline" class="id-icon"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="identity-text animate-in">
+          <h2 class="gradient-text">Who I Am</h2>
+          <p>
+            I am a results-driven **Full Stack Developer** with a relentless passion for building digital ecosystems
+            that matter. My journey is defined by a deep curiosity for how systems interact and a commitment to
+            architectural excellence.
+          </p>
+          <p>
+            From crafting high-conversion frontends in **Angular and React** to engineering robust backends with
+            **Node.js ,VB.NET and PHP**, I thrive at the intersection of logic and creativity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Matrix -->
+    <section class="matrix-section animate-in">
+      <div class="section-header ion-text-center">
+        <h2 class="gradient-text">Operational History</h2>
+      </div>
+
+      <div class="matrix-grid">
+        <div class="matrix-item cyber-card" *ngFor="let project of projects">
+          <div class="project-img-thumb" *ngIf="project.image">
+            <img [src]="project.image" [alt]="project.title"
+              style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(255, 255, 255, 0.1);" />
+          </div>
+          <div class="item-content">
+            <h4 style="color: var(--ion-color-primary); font-size: 0.8rem; margin: 0; letter-spacing: 2px;">{{
+              project.category | uppercase }}</h4>
+            <div class="item-header" style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+              <ion-icon name="code-slash-outline"
+                style="color: var(--ion-color-secondary); font-size: 1.5rem;"></ion-icon>
+              <h3 style="margin: 0; font-size: 1.5rem;">{{ project.title }}</h3>
+            </div>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Convergence -->
+    <section class="contact-section animate-in">
+      <div class="convergence-card cyber-card ion-text-center">
+        <h2 class="gradient-text">Let's Connect</h2>
+        <p style="color: white;">Ready to deploy high-impact solutions to your next project?</p>
+
+        <div class="contact-methods">
+          <a [href]="'mailto:' + email" class="contact-link">
+            <ion-icon name="mail-unread-outline"></ion-icon>
+            <span>{{ email }}</span>
+          </a>
+          <div class="contact-link">
+            <ion-icon name="planet-outline"></ion-icon>
+            <span>Remote Ready / Global Collaboration</span>
+          </div>
+        </div>
+
+        <ion-button class="neon-btn ion-margin-top" size="large">ESTABLISH_COMMUNICATION</ion-button>
+      </div>
+    </section>
+  </div>
+</ion-content>

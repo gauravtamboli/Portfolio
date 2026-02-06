@@ -1,0 +1,204 @@
+.about-container {
+    background: var(--app-bg-deep);
+    min-height: 100vh;
+}
+
+/* Immersive Hero Header */
+.about-hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #000, var(--app-bg-deep));
+
+    .hero-bg-accent {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(0, 255, 242, 0.1) 0%, transparent 70%);
+        animation: pulse 10s infinite alternate;
+    }
+
+    .hero-content {
+        z-index: 2;
+
+        .category-label {
+            color: var(--ion-color-secondary);
+            letter-spacing: 8px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .main-name {
+            font-size: 5rem;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--ion-color-primary);
+            letter-spacing: 3px;
+            opacity: 1;
+            /* Improved visibility */
+        }
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 0.4;
+    }
+}
+
+/* Identity Section with Split Layout */
+.identity-section {
+    padding: 80px 20px;
+
+    .section-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 60px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+}
+
+.visual-card {
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .id-icon {
+        font-size: 8rem;
+        color: var(--ion-color-primary);
+        filter: drop-shadow(0 0 15px var(--ion-color-primary));
+    }
+}
+
+.identity-text {
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #ffffff;
+        /* Solid white */
+        opacity: 1;
+        /* Removed dimming */
+        margin-bottom: 20px;
+    }
+}
+
+/* Operational History Matrix */
+.matrix-section {
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.3);
+
+    .matrix-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1300px;
+        margin: 50px auto 0;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.matrix-item {
+    padding: 40px;
+    height: 100%;
+
+    .item-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        ion-icon {
+            font-size: 2.5rem;
+            color: var(--ion-color-primary);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin: 0;
+        }
+    }
+
+    p {
+        line-height: 1.7;
+    }
+}
+
+/* Contact Convergence */
+.contact-section {
+    padding: 100px 20px;
+
+    .convergence-card {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 80px 40px;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    }
+
+    .contact-methods {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 40px 0;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+
+        ion-icon {
+            font-size: 1.5rem;
+            color: var(--ion-color-secondary);
+        }
+
+        &:hover {
+            color: var(--ion-color-primary);
+        }
+    }
+}

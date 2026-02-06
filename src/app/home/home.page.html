@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title slot="start" class="ion-padding-start">
+      <span class="gradient-text" style="font-size: 1.8rem; letter-spacing: 4px;">GAURAV</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home" routerLinkActive="active-tab" class="neon-btn">Home</ion-button>
+      <ion-button routerLink="/dashboard" routerLinkActive="active-tab" class="neon-btn">Skills</ion-button>
+      <ion-button routerLink="/projects" routerLinkActive="active-tab" class="neon-btn">Projects</ion-button>
+      <ion-button routerLink="/about" routerLinkActive="active-tab" class="neon-btn">About</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="hero-wrapper">
+    <!-- Hero Text -->
+    <section class="hero-section">
+      <div class="cyber-content floating">
+        <h4 class="ion-no-margin" style="color: var(--ion-color-secondary); letter-spacing: 10px; font-weight: 300;">
+          INITIALIZING...</h4>
+        <h1 class="ion-no-margin main-title">I AM <span class="gradient-text">{{ name }}</span></h1>
+        <h2 class="sub-title">CORE PROTOCOL: FULL STACK DEVELOPMENT</h2>
+
+        <div class="hero-cta ion-padding-top">
+          <ion-button class="neon-btn" size="large" routerLink="/projects" style="--border-width: 2px;">DECRYPT
+            PROJECTS</ion-button>
+          <ion-button fill="clear" color="secondary" size="large" routerLink="/about">USER_DETAILS ></ion-button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Accents -->
+    <div class="grid-overlay"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+</ion-content>

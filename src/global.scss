@@ -1,0 +1,208 @@
+@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+* {
+    font-family: 'Outfit', sans-serif !important;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--app-gradient);
+    background-attachment: fixed;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Futuristic Cyber Card - Readability Optimized */
+.cyber-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(10, 10, 30, 0.5) 100%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 40px 0 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--ion-color-primary), var(--ion-color-secondary));
+        opacity: 0.9;
+        z-index: 2;
+    }
+
+    h2,
+    h3 {
+        color: #ffffff;
+        font-weight: 800;
+        text-shadow: none;
+        margin-top: 10px;
+    }
+
+    p {
+        color: #ffffff;
+        opacity: 1;
+        text-shadow: none;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+
+    h4 {
+        color: var(--ion-color-primary) !important;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        text-shadow: 0 0 5px rgba(var(--ion-color-primary-rgb), 0.3);
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        border-color: var(--ion-color-primary);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(10, 10, 30, 0.7) 100%);
+    }
+}
+
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--ion-color-primary), var(--ion-color-secondary), var(--ion-color-primary));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+ion-header {
+    background: #000;
+}
+
+ion-toolbar {
+    --background: #000;
+    --border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.active-tab {
+    --color: var(--ion-color-primary) !important;
+    font-weight: 800;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 15%;
+        width: 70%;
+        height: 3px;
+        background: var(--ion-color-primary);
+        border-radius: 4px;
+        box-shadow: 0 0 10px var(--ion-color-primary);
+    }
+}
+
+/* Floating Elements */
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.neon-btn {
+    --background: transparent;
+    --border-color: transparent;
+    --color: #ffffff;
+    /* White text */
+    font-weight: 600;
+    font-size: 1.1rem;
+    /* Increased font size */
+    letter-spacing: 1px;
+    text-transform: none;
+    transition: all 0.3s;
+    margin: 0 5px;
+
+    &:hover {
+        --color: var(--ion-color-primary);
+        text-shadow: 0 0 8px rgba(var(--ion-color-primary-rgb), 0.5);
+    }
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* New Cyber Utilities */
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin: 15px 0;
+    overflow: hidden;
+
+    .skill-progress {
+        height: 100%;
+        background: linear-gradient(90deg, var(--ion-color-primary), var(--ion-color-secondary));
+        box-shadow: 0 0 10px var(--ion-color-primary);
+    }
+}
+
+.project-img-container {
+    position: relative;
+    overflow: hidden;
+
+    .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, var(--app-bg-deep), transparent);
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    ion-buttons {
+        display: none;
+        /* Hide head tabs on mobile for space */
+    }
+}
