@@ -24,11 +24,12 @@ body {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 0 40px 0 40px;
+    border-radius: 0 clamp(20px, 5vw, 40px) 0 clamp(20px, 5vw, 40px);
     position: relative;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    padding: clamp(15px, 3vw, 30px);
     color: #ffffff;
 
     &::before {

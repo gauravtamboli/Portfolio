@@ -3,8 +3,8 @@
     border: 1px solid var(--ion-color-primary) !important;
     box-shadow: 0 0 15px rgba(var(--ion-color-primary-rgb), 0.2) !important;
     text-align: center;
-    padding: 30px 20px;
-    border-radius: 20px 0 20px 0 !important;
+    text-align: center;
+    border-radius: 0 clamp(10px, 4vw, 20px) 0 clamp(10px, 4vw, 20px) !important;
 
     h3 {
         color: #ffffff !important;
